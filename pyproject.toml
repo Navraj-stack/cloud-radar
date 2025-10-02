@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "cloud-radar"
+version = "0.0.0"
+description = "Run functional tests on cloudformation stacks."
+readme = "README.md"
+authors = ["Levi Blaney <shadycuz@gmail.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/DontShaveTheYak/cloud-radar"
+keywords = ["aws", "cloudformation", "cloud-radar", "testing", "taskcat", "cloud", "radar"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Testing"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+taskcat = "^0.9.20"
+cfn-flip = "^1.2.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+coverage = {extras = ["toml"], version = "^7.0.0"}
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.6.1"
+black = "^23.0.0"
+flake8 = "^5.0.0"
+flake8-black = "^0.3.0"
+flake8-import-order = "^0.18.1"
+flake8-bugbear = "^23.0.0"
+mypy = "^1.0.0"
+types-requests = "^2.28.11"
+types-PyYAML = "^6.0.12"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["cloud_radar"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
