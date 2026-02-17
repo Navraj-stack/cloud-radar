@@ -6,11 +6,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Python][python-shield]][pypi-url]
-[![Latest][version-shield]][pypi-url]
-[![Tests][test-shield]][test-url]
-[![Coverage][codecov-shield]][codecov-url]
-[![License][license-shield]][license-url]
 <!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -24,24 +19,6 @@
   </a> -->
 
   <h3 align="center">Cloud-Radar</h3>
-
-  <p align="center">
-    Write unit and functional tests for AWS Cloudformation.
-    <!-- <br />
-    <a href="https://github.com/DontShaveTheYak/cloud-radar"><strong>Explore the docs Â»</strong></a>
-    <br /> -->
-    <br />
-    <!-- <a href="https://github.com/DontShaveTheYak/cloud-radar">View Demo</a>
-    Â· -->
-    <a href="https://github.com/DontShaveTheYak/cloud-radar/issues">Report Bug</a>
-    Â·
-    <a href="https://github.com/DontShaveTheYak/cloud-radar/issues">Request Feature</a>
-    Â·
-    <a href="https://la-tech.co/post/hypermodern-cloudformation/getting-started/">Guide</a>
-  </p>
-</p>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -254,8 +231,6 @@ class TestLogBucket(unittest.TestCase):
             # Test
 ```
 
-All the properties and methods of a [stack instance](https://github.com/aws-quickstart/taskcat/blob/main/taskcat/_cfn/stack.py#L188).
-
 A real functional testing example using Pytest can be seen [here](./tests/test_cf/test_examples/test_functional.py)
 
 </details>
@@ -276,13 +251,9 @@ A real functional testing example using Pytest can be seen [here](./tests/test_c
   * Variables like `StackName` and `StackId` should have a better default than ""
 - Handle References to resources that shouldn't exist.
   * It's currently possible that a `!Ref` to a Resource stays in the final template even if that resource is later removed because of a conditional.
-- Handle function order
-  * Some functions are only allowed in [certain parts](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-conditions.html) of the template.
-
+    
 ### Functional
 - Add the ability to update a stack instance to Taskcat.
-
-See the [open issues](https://github.com/DontShaveTheYak/cloud-radar/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -318,24 +289,3 @@ This project is actively maintained by NAVRAJ SINGH. As a Cloud Engineer with 3 
 
 Connect with NAVRAJ:
 *   Email: navraj771s@gmail.com
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[python-shield]: https://img.shields.io/pypi/pyversions/cloud-radar?style=for-the-badge
-[version-shield]: https://img.shields.io/pypi/v/cloud-radar?label=latest&style=for-the-badge
-[pypi-url]: https://pypi.org/project/cloud-radar/
-[test-shield]: https://img.shields.io/github/actions/workflow/status/DontShaveTheYak/cloud-radar/test.yml?label=Tests&style=for-the-badge
-[test-url]: https://github.com/DontShaveTheYak/cloud-radar/actions?query=workflow%3ATests+branch%3Amaster
-[codecov-shield]: https://img.shields.io/codecov/c/gh/DontShaveTheYak/cloud-radar?color=green&style=for-the-badge&token=NE5C92139X
-[codecov-url]: https://codecov.io/gh/DontShaveTheYak/cloud-radar
-[contributors-shield]: https://img.shields.io/github/contributors/DontShaveTheYak/cloud-radar.svg?style=for-the-badge
-[contributors-url]: https://github.com/DontShaveTheYak/cloud-radar/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/DontShaveTheYak/cloud-radar.svg?style=for-the-badge
-[forks-url]: https://github.com/DontShaveTheYak/cloud-radar/network/members
-[stars-shield]: https://img.shields.io/github/stars/DontShaveTheYak/cloud-radar.svg?style=for-the-badge
-[stars-url]: https://github.com/DontShaveTheYak/cloud-radar/stargazers
-[issues-shield]: https://img.shields.io/github/issues/DontShaveTheYak/cloud-radar.svg?style=for-the-badge
-[issues-url]: https://github.com/DontShaveTheYak/cloud-radar/issues
-[license-shield]: https://img.shields.io/github/license/DontShaveTheYak/cloud-radar.svg?style=for-the-badge
-[license-url]: https://github.com/DontShaveTheYak/cloud-radar/blob/master/LICENSE.txt
-[product-screenshot]: images/screenshot.png
